@@ -9,48 +9,46 @@
     <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 
-<body class="min-h-screen">
+<body class="min-h-screen scroll-smooth">
     <div class="bg-custom-background bg-cover flex flex-col items-center justify-center text-center">
         <!-- Navbar -->
-        <nav class="w-full mx-auto flex flex-wrap items-center p-2 justify-between fixed top-0 z-10 bg-white">
-            <a href="#" class="flex">
-                <span class="text-2xl font-extrabold self-center whitespace-nowrap text-primary">Fábrica 2A</span>
+        <nav id="mainNav"
+            class="w-full mx-auto flex flex-wrap p-4 items-center justify-between fixed top-0 transition z-10 text-white">
+            <a id="logo" href="#" class="flex">
+                <span class="text-2xl font-extrabold self-center whitespace-nowrap">Fábrica 2A</span>
             </a>
-            <button data-collapse-toggle="mobile-menu" type="button"
-                class="md:hidden ml-3 text-primary hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center"
-                aria-controls="mobile-menu" aria-expanded="false">
+            <button id="menu" data-collapse-toggle="mobile-menu" type="button"
+                class="md:hidden ml-3 hover:text-gray-300 focus:outline-none rounded-sm inline-flex items-center justify-center">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
                         d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
                         clip-rule="evenodd"></path>
                 </svg>
-                <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
+                <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
                         d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                         clip-rule="evenodd"></path>
                 </svg>
             </button>
-            <div class="hidden md:block w-full md:w-auto " id="mobile-menu" >
+            <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
                 <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium items-center">
-                    <li>
+                    <li id="homeLi">
                         <a href="#home"
-                            class="text-primary text-xl font-extrabold hover:bg-third border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-third md:p-0">Home</a>
+                            class="text-xl font-extrabold  border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-stone-500 md:p-0">Home</a>
                     </li>
-                    <li>
+                    <li id="aboutLi">
                         <a href="#about_us"
-                            class="text-primary text-xl font-extrabold hover:bg-third border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-third md:p-0">Sobre
+                            class="text-xl font-extrabold  border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-stone-500 md:p-0">Sobre
                             Nós</a>
                     </li>
-                    <li>
+                    <li id="galleryLi">
                         <a href="#gallery"
-                            class="text-primary text-xl font-extrabold hover:bg-third border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-third md:p-0">Móveis</a>
+                            class="text-xl font-extrabold  border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-stone-500 md:p-0">Móveis</a>
                     </li>
-                    <li>
+                    <li id="contactLi">
                         <a href="#contact"
-                            class="flex items-center justify-center text-primary hover:text-gray-300 focus:outline-none bg-primary rounded-lg p-2 hover:bg-third transition transform ">
-                            <img class="h-5" src="assets/media/wpp.svg" alt="Ícone do WhatsApp">
-                            <p class="ml-2 font-bold text-sm text-white">Contato</p>
+                            class="flex items-center justify-center focus:outline-none transition transform ">
+                            <button class="buttonx-2 font-bold text-xl">Contato</button>
                         </a>
                     </li>
                 </ul>
@@ -59,7 +57,7 @@
 
         <!-- Header -->
         <header class="container mx-auto p-2 header_title flex justify-center items-center flex-col" id="home">
-            <h1 class="text-5xl text-white font-bold">Criando Memórias com <span class="font-extrabold">Móveis
+            <h1 id="logo" class="text-5xl text-white font-bold">Criando Memórias com <span class="font-extrabold">Móveis
                     Rústicos</span> de Qualidade</h1>
             <p class="text-base text-white font-medium p-2">Envolva-se em Histórias e Crie Lembranças com Nossos Móveis
                 Rústicos de Qualidade, Feitos à Mão.</p>
@@ -72,7 +70,7 @@
         <div class="text-center p-2 mt-8 md:flex md:justify-center md:items-center md:flex-col md:mr-24">
             <h2 class="text-primary text-3xl font-extrabold border-b-2 border-secundary pb-4 md:text-start">Sobre Nós
             </h2>
-            <p class="text-base font-medium mt-2 p-4">Lorem ipsum dolor sit amet. In quasi consequuntur qui quia odit
+            <p class="text-justify font-medium mt-2 p-4">Lorem ipsum dolor sit amet. In quasi consequuntur qui quia odit
                 qui
                 sunt voluptates At consequatur sunt vel consequuntur placeat. Ut labore atque eum autem facere ex Quis
                 architecto. Et sunt voluptatem qui internos explicabo quo quidem molestias. Aut accusantium dolore est
@@ -87,63 +85,63 @@
         <h2 class="text-black text-4xl font-extrabold">Galeria</h2>
         <div class="md:flex md:justify-center md:gap-6 md:text-justify">
             <!-- Gallery Images (sample, adjust as needed) -->
-            <div class="gallery_images flex justify-center items-center flex-col mt-8 md:items-start ">
-                <img src="assets/media/Rectangle 6.svg" alt="">
+            <div class="gallery_images flex items-center flex-col mt-8 md:items-start">
+                <img src="assets/media/images/espelhos.svg" alt="">
+                <h3 class="text-black text-2xl font-semibold ml-2">Espelho</h3>
+                <p class="text-black text-sm font-normal ml-2" style="max-width: 200px;">
+                    <!-- ajuste a largura conforme necessário -->
+                    Lorem ipsum dolor sit amet. In quasi consequuntur qui quia
+                </p>
+            </div>
+            <div class="gallery_images flex items-center flex-col mt-8 md:items-start">
+                <img src="assets/media/images/mesa_centro.svg" alt="">
                 <h3 class="text-black text-2xl font-semibold ml-2">Mesa de Centro</h3>
                 <p class="text-black text-sm font-normal ml-2" style="max-width: 200px;">
                     <!-- ajuste a largura conforme necessário -->
-                    Mesa de centro em carvalho, destacada por pés robustos de ferro.
+                    Lorem ipsum dolor sit amet. In quasi consequuntur qui quia
                 </p>
             </div>
-            <div class="gallery_images flex justify-center items-center flex-col mt-8 md:items-start ">
-                <img src="assets/media/Rectangle 6.svg" alt="">
+            <div class="gallery_images flex items-center flex-col mt-8 md:items-start">
+                <img src="assets/media/images/mesa_centro_02.svg" alt="">
                 <h3 class="text-black text-2xl font-semibold ml-2">Mesa de Centro</h3>
                 <p class="text-black text-sm font-normal ml-2" style="max-width: 200px;">
-                    <!-- ajuste a largura conforme necessário -->
-                    Mesa de centro em carvalho, destacada por pés robustos de ferro.
+                    Lorem ipsum dolor sit amet. In quasi consequuntur qui quia
                 </p>
             </div>
-            <div class="gallery_images flex justify-center items-center flex-col mt-8 md:items-start ">
-                <img src="assets/media/Rectangle 6.svg" alt="">
-                <h3 class="text-black text-2xl font-semibold ml-2">Mesa de Centro</h3>
+            <div class="gallery_images flex items-center flex-col mt-8 md:items-start">
+                <img src="assets/media/images/mesa_jantar.svg" alt="">
+                <h3 class="text-black text-2xl font-semibold ml-2">Mesa de Jantar</h3>
                 <p class="text-black text-sm font-normal ml-2" style="max-width: 200px;">
-                    Mesa de centro em carvalho, destacada por pés robustos de ferro.
-                </p>
-            </div>
-            <div class="gallery_images flex justify-center items-center flex-col mt-8 md:items-start ">
-                <img src="assets/media/Rectangle 6.svg" alt="">
-                <h3 class="text-black text-2xl font-semibold ml-2">Mesa de Centro</h3>
-                <p class="text-black text-sm font-normal ml-2" style="max-width: 200px;">
-                    Mesa de centro em carvalho, destacada por pés robustos de ferro.
+                    Lorem ipsum dolor sit amet. In quasi consequuntur qui quia
                 </p>
             </div>
         </div>
 
 
         <div class="md:flex md:justify-center md:gap-6 md:text-justify">
-            <div class="gallery_images flex justify-center items-center flex-col mt-8 md:items-start ">
-                <img src="assets/media/Rectangle 6.svg" alt="">
-                <h3 class="text-black text-2xl font-semibold ml-2">Mesa de Centro</h3>
+            <div class="gallery_images flex items-center flex-col mt-8 md:items-start ">
+                <img src="assets/media/images/espelho02.svg" alt="">
+                <h3 class="text-black text-2xl font-semibold ml-2">Espelho</h3>
                 <p class="text-black text-sm font-normal ml-2" style="max-width: 200px;">
-                    Mesa de centro em carvalho, destacada por pés robustos de ferro.
+                    Lorem ipsum dolor sit amet. In quasi consequuntur qui quia
                 </p>
             </div>
-            <div class="gallery_images flex justify-center items-center flex-col mt-8 md:items-start ">
-                <img src="assets/media/Rectangle 6.svg" alt="">
-                <h3 class="text-black text-2xl font-semibold ml-2">Mesa de Centro</h3>
+            <div class="gallery_images flex items-center flex-col mt-8 md:items-start ">
+                <img src="assets/media/images/mesa_02.svg" alt="">
+                <h3 class="text-black text-2xl font-semibold ml-2">Mesa de Jantar</h3>
                 <p class="text-black text-sm font-normal ml-2" style="max-width: 200px;">
-                    Mesa de centro em carvalho, destacada por pés robustos de ferro.
+                    Lorem ipsum dolor sit amet. In quasi consequuntur qui quia
                 </p>
             </div>
-            <div class="gallery_images flex justify-center items-center flex-col mt-8 md:items-start ">
-                <img src="assets/media/Rectangle 6.svg" alt="">
-                <h3 class="text-black text-2xl font-semibold ml-2">Mesa de Centro</h3>
+            <div class="gallery_images flex items-center flex-col mt-8 md:items-start ">
+                <img src="assets/media/images/espelho03.svg" alt="">
+                <h3 class="text-black text-2xl font-semibold ml-2">Espelho</h3>
                 <p class="text-black text-sm font-normal ml-2" style="max-width: 200px;">
-                    Mesa de centro em carvalho, destacada por pés robustos de ferro.
+                    Lorem ipsum dolor sit amet. In quasi consequuntur qui quia
                 </p>
             </div>
-            <div class="gallery_images flex justify-center items-center flex-col mt-8 md:items-start ">
-                <img src="assets/media/Rectangle 6.svg" alt="">
+            <div class="gallery_images flex items-center flex-col mt-8 md:items-start ">
+                <img src="assets/media/images/mesa_de_centro_03.svg" alt="">
                 <h3 class="text-black text-2xl font-semibold ml-2">Mesa de Centro</h3>
                 <p class="text-black text-sm font-normal ml-2" style="max-width: 200px;">
                     Mesa de centro em carvalho, destacada por pés robustos de ferro.
@@ -152,12 +150,14 @@
         </div>
     </section>
 
-     <!-- Contact Section -->
-     <section id="contact" class="bg-bgfooter flex flex-col text-center mt-8 md:mt-20" style="width: 100%;">
+    <!-- Contact Section -->
+    <section id="contact" class="bg-bgfooter flex flex-col text-center mt-8 md:mt-20" style="width: 100%;">
         <div class="md:flex md:justify-center md:items-center md:gap-12 ">
             <!-- Fábrica 2A Info -->
             <div class="md:flex md:justify-center md:items-center md:flex-col">
-                <h4 class="text-third text-4xl font-extrabold mt-10">Fábrica 2A</h4>
+                <a href="#">
+                    <h4 class="text-third text-4xl font-extrabold mt-10">Fábrica 2A</h4>
+                </a>
                 <div class="copyright flex justify-center items-center p-4">
                     <img class="mt-2" src="assets/media/image 5.svg" alt="Ícone Navegação Segura Google">
                     <img class="mt-2" src="assets/media/image 6.svg" alt="Ícone Avaliações Verificadas Google">
@@ -165,28 +165,34 @@
                 </div>
             </div>
             <!-- Contact Info -->
-            <div class="contact mt-8 md:mt-0 text-third text-xl text-center font-extrabold md:flex md:flex-col md:items-start">
+            <div
+                class="contact mt-8 md:mt-0 text-third text-xl text-center font-extrabold md:flex md:flex-col md:items-start">
                 <p class="text-xl text-third font-extrabold p-2">Contato</p>
                 <div class="contact_phone flex justify-center items-center p-2">
                     <img class="mr-2" src="assets/media/Vector.svg" alt="Ícone de Telefone">
                     <p class="text-base text-third font-extrabold">(00) 00000-0000</p>
                 </div>
-                <div class="contact_phone flex justify-center items-center p-2">
+                <a href="#" class="contact_phone flex justify-center items-center p-2">
                     <img class="mr-2" src="assets/media/Vector (1).svg" alt="Ícone de Email">
                     <p class="text-base text-third font-extrabold">example@example.com.br</p>
-                </div>
+                </a>
             </div>
             <!-- WhatsApp Contact -->
-            <div class="whatsapp flex justify-center items-center mt-8">
-                <img class="mr-2 h-12" src="assets/media/wpp.svg" alt="ícone do WhatsApp">
-                <p class="contact mt-2 text-third text-base text-center font-extrabold">Entre em contato <br>via
-                    WhatsApp</p>
-            </div>
+            <a href="https://api.whatsapp.com/send?phone=0000000000" target="_blank">
+                <div class="whatsapp flex justify-center items-center mt-8">
+                    <img class="mr-2 h-12" src="assets/media/wpp.svg" alt="ícone do WhatsApp">
+                    <p class="contact mt-2 text-third text-base text-center font-extrabold">Entre em contato <br>via
+                        WhatsApp</p>
+                </div>
+            </a>
         </div>
         <!-- Copyright Info -->
         <div class="copyright mt-8">
-            <p class="p-2 text-black text-sm">Copyright © 2023 - Todos os direitos reservados | Powered by Felipe
-                Tereska e <a class="hover:text-primary font-bold transition duration-300"
+            <p class="p-2 text-black text-sm">Copyright © 2023 <span class="text-primary font-bold">Fabrica 2A</span> -
+                Todos os direitos reservados | Powered by <a
+                    class="hover:text-primary font-bold transition duration-300"
+                    href="https://www.flowcode.com/page/fellipetereska">Felipe
+                    Tereska</a> e <a class="hover:text-primary font-bold transition duration-300"
                     href="https://linkme.bio/luizmatheusdev">Luiz Matheus da Silva</a></p>
         </div>
     </section>
@@ -194,12 +200,47 @@
     <!-- Fixed WhatsApp Button -->
     <div class="fixed_whatsapp">
         <a href="https://api.whatsapp.com/send?phone=0000000000" target="_blank">
-            <img class="fixed z-10" src="assets/media/image 3.svg" alt="ícone do Whatsapp" style="right: 0; top: 0; margin-top: 500px;">
+            <img class="fixed z-10" src="assets/media/image 3.svg" alt="ícone do Whatsapp"
+                style="position: fixed; right: 20px; bottom: 20px;">
         </a>
     </div>
 
+    <script>
+        window.addEventListener('scroll', function () {
+            var nav = document.querySelector('nav');
+            var logo = document.getElementById('logo');
+            var homeLi = document.getElementById('homeLi');
+            var aboutLi = document.getElementById('aboutLi');
+            var galleryLi = document.getElementById('galleryLi');
+            var contactLi = document.getElementById('contactLi');
+            var menu = document.getElementById('menu');
+
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white');
+                logo.classList.add('text-primary');
+                homeLi.classList.add('text-primary');
+                aboutLi.classList.add('text-primary');
+                galleryLi.classList.add('text-primary');
+                contactLi.classList.add('bg-primary', 'rounded-lg', 'py-2', 'p-4');
+                menu.classList.add('text-primary');
+            } else {
+                nav.classList.remove('bg-white','md:bg-transparent', 'text-third');
+                logo.classList.remove('text-primary');
+                homeLi.classList.remove('text-primary');
+                aboutLi.classList.remove('text-primary');
+                galleryLi.classList.remove('text-primary');
+                contactLi.classList.remove('bg-primary', 'rounded-lg', 'py-2', 'p-4');
+                menu.classList.remove('text-primary');
+                nav.classList.add('bg-primary');
+                contactLi.classList.add('bg-white', 'text-third', 'rounded-lg', 'py-2', 'p-4');
+            }
+        });
+    </script>
+
     <!-- JavaScript Bundle -->
     <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+
 </body>
+
 
 </html>
