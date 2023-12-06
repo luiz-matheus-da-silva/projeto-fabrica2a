@@ -1,15 +1,8 @@
 {
-  "name": "projeto-fabrica2a",
-  "version": "1.0.0",
-  "description": "Landing page para a Fábrica2A",
-  "main": "index.js",
-  "scripts": {
-    "build:css": "tailwindcss build styles.css -o output.css"
-  },
   "devDependencies": {
-    "tailwindcss": "^3.3.5"
+    "tailwindcss": "^3.3.6"
   },
-  "keywords": [],
-  "authors": ["Luiz Matheus da Silva", "Fellipe Tereska"],
-  "license": "ISC"
+  "scripts": {
+    "build": "tailwindcss build src/assets/styles/styles.css -o public/styles.css"
+  }
 }
