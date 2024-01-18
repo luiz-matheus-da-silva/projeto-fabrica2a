@@ -12,10 +12,28 @@ nav {
     background-repeat: no-repeat;
     background-position: center;
 }
-
 .header_title {
     text-align: center;
     height: 94vh;
+}
+
+.header_title {
+    color: white;
+}
+
+.header_title .font-bold {
+    font-weight: bold;
+}
+
+/* .header_title h1 {
+    padding: 8px;
+    font-size: 2rem;
+    font-weight: bold;
+} */
+
+.header_title p {
+    font-size: 1.3rem;
+    font-weight: normal;
 }
 
 .about_us_img img {
@@ -29,9 +47,6 @@ nav {
     height: 70px;
 }
 
-    .gallery-image {
-        width: 253px;
-        height: 253px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
+.black {
+    background-color: rgba(0, 0, 0, 0.61);
+}
