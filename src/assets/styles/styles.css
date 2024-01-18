@@ -7,7 +7,7 @@ nav {
 }
 
 .bg-custom-background {
-    background-image: url('/src/assets/media/luxo-moderno-em-design-confortavel-de-sala-de-estar-domestica-gerado-por-ia.svg');
+    background-image: url('/src/assets/media/image_wallpaper.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -45,4 +45,8 @@ nav {
 
 .fixed_whatsapp img {
     height: 70px;
+}
+
+.black {
+    background-color: rgba(0, 0, 0, 0.61);
 }
